@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃005</title>
+    <link rel="stylesheet" href="css/grid-guide.css">
+</head>
+<body>
+    <div class="boxA">
+        <div class="box1">
+            <div class="box1-1">box1</div>
+            <div class="box1-2">box2</div>
+            <div class="box1-3">box3</div>
+            <div class="box1-4">box4</div>
+        </div>
+        <div class="box2">box001</div>
+    </div>
+
+
+    <div class="boxB">box5</div>
+    <div class="boxC">
+        <div class="box4-1">box002</div>
+        <div class="box4-2">box003</div>
+        <div class="box4-3">box004</div>
+        <div class="box4-4">box005</div>
+    </div>
+    <div class="boxD">
+        <div class="box5-1">box006</div>
+        <div class="box5-2">box007</div>
+        <div class="box5-3">box008</div>
+    </div>
+
+    <style>
+        .boxA {
+            display:flex;
+            align-items: flex-start;
+        }
+        .box1 {width: 40%;}
+        .box2 {width: 60%;}
+
+        .boxC {display: flex;}
+        .boxC div {flex-grow: 1;}
+
+        .boxD { display: flex;}
+        .boxD div {flex-grow: 1;}
+
+    </style>
+</body>
+</html>
