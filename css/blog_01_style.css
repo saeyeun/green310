@@ -1,0 +1,168 @@
+@charset 'utf-8';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* 로고 */
+.logo h1 {
+    font-size: 30px;
+    padding: 15px;
+}
+
+/* 메뉴 */
+.box2 {
+    background-color: #7cbac1;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.menu ul li a:hover {
+    background-color: #75dbe7;
+}
+
+/* 기사 오른쪽으로 정렬 */
+.box001 {
+    display: flex;
+}
+.box3 {
+    width: 70%;
+}
+.box4 {
+    width: 30%;
+}
+
+
+/* 메인 게시글 */
+.box3 {
+    padding-right: 50px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.box3 h1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.box3 img {
+    max-width: 100%;
+}
+
+
+.box3 p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+.box3 h2 {
+    font-weight: normal;
+    border-left: 10px solid #7cbac1;
+    padding-left: 10px;
+    margin-top: 40px;
+}
+
+/* box4설정 */
+.box4 {
+    margin-top: 25px;
+}
+
+.box4 h1 {
+    color: #666;
+    font-size: 20px;
+}
+
+.box4 p {
+    font-size: 13px;
+}
+
+/* 특집기사 */
+.sidemenu {
+    margin-bottom: 40px;
+}
+
+.sidemenu h1 {
+    border-bottom: dotted 2px #ddd;
+}
+.sidemenu .text1 {
+    margin-top: 10px;
+}
+
+.sidemenu .text1 p {
+    padding-top: 10px;
+}
+/* 추천기사 */
+.recommend {
+    margin-bottom: 40px;
+}
+
+.recommend h1 {
+    border-bottom: dotted 2px #ddd;
+}
+
+.recommend .text2 {
+    margin-top: 10px;
+}
+
+.recommend .text2 p {
+    padding-top: 10px;
+}
+
+/* 인기기사 */
+.popular .text3 {
+    margin-top: 10px;
+}
+
+.popular .text3 p {
+    padding-top: 10px;
+}
+
+.popular h1 {
+    border-bottom: dotted 2px #ddd;
+}
+
+/* 카피라이트 */
+.box5 {
+    border-top: solid 1px #ddd;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.copyright {
+    color: #666;
+    font-size: 14px;
+}
+
+
+
+.box001 {
+    padding-bottom: 0px;
+} 
+
+
+
+.menu, .copyright, .box001, .box1 {
+    margin: 0 auto;
+    width: 1000px;
+}
