@@ -1,4 +1,5 @@
 @charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
 * {
     margin: 0;
@@ -18,8 +19,14 @@ a {
 
 /* 로고 */
 .logo h1 {
+    font-weight: normal;
     font-size: 30px;
     padding: 15px;
+    font-family: 'Paytone One', sans-serif;
+}
+
+.logo h1 a {
+    color: #83a4a8;
 }
 
 /* 메뉴 */
@@ -53,7 +60,47 @@ a {
 }
 
 
+/* 기사 작성일 */
+.storyinfo {
+    margin-bottom: 10px;
+}
+
+.storyinfo i {
+    color: #aaa;
+    font-size: 18px;
+}
+
+
+/* 카테고리 */
+
+
+.story-cat {
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.story-cat ul {
+    display: flex;
+}
+
+.story-cat a {
+    display: block;
+    background-color: #75dbe7;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.story-cat ul li {
+    margin-right: 5px;
+}
+
+
+
 /* 메인 게시글 */
+
+
 .box3 {
     padding-right: 50px;
     padding-bottom: 30px;
