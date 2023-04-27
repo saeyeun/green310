@@ -16,6 +16,11 @@ a {
     color: #000;
 }
 
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
 body {
     font-family: '맑은고딕',
                 'Apple SD Gothic Neo',sans-serif;
@@ -116,6 +121,75 @@ body {
     border-radius: 2px;
 }
 
+/* sns공유 설정 */
+.snsSet {
+    margin-top: 40px;
+}
+.snsSet ul {
+    display: flex;
+}
+.snsSet ul li {
+    width: 33.3333%;
+    /* flex-grow: 1; */
+}
+.snsSet ul li a {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    color:#fff;
+}
+
+.snsSet li:nth-child(1) a {
+    background-color: #1da1f2;
+}
+.snsSet li:nth-child(2) a {
+    background-color: #1877f2;
+}
+.snsSet li:nth-child(3) a {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#833ab4+0,e1306c+100 */
+background: #833ab4; /* Old browsers */
+background: -moz-linear-gradient(left,  #833ab4 0%, #e1306c 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #833ab4 0%,#e1306c 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #833ab4 0%,#e1306c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#833ab4', endColorstr='#e1306c',GradientType=1 ); /* IE6-9 */
+
+}
+
+/* 관련기사 설정 */
+.relation {
+    background-color: #f0f0d4;
+    padding: 20px;
+    margin-top: 40px;
+}
+.relation h1 {
+    color: #727224;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.relation ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.relation ul li {
+    width: 25%;
+}
+.relation ul li a {
+    display: block;
+    padding: 5px;
+    font-size: 14px;
+}
+.relation img {
+    max-width: 100%;
+}
+.relation .txt {}
+
+
+
+
+
 /* 특집기사 설정 */
 
 .sidemenu {
@@ -194,8 +268,34 @@ body {
 .popular ul li {}
 .popular ul li a {
     display: block;
+    border-bottom: dotted 1px #ddd;
+    color: #2288bb;
     padding: 5px;
     font-size: 14px;
+}
+
+
+.popular a:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.popular img {
+    /* border: none;  전체설정으로*/
+    float: left;
+    width: 60px;
+}
+.popular .txt {
+    float: none;
+    width: auto;
+    padding-left: 15px;
+    margin-left: 60px;
+}
+
+.popular span {
+    color: #666;
+    font-size: 12px;
+    display: block;
 }
 
 /* 카피라이트 */
