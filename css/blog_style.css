@@ -160,7 +160,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#833ab4', end
 }
 .relation ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*ul의 값이 어디서부터인지 모르니까 ul에세 시작점과 끝점의 구간을 지정해줌*/
+    /*사이즈 변동하는 경우 wrap필수 설정*/
 }
 
 .relation ul li {
@@ -172,7 +173,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#833ab4', end
     font-size: 14px;
 }
 .relation img {
-    max-width: 100%;
+    width: 100%; /*max가 들어가면 사이즈가 안커지니까 max지워주기*/
 }
 .relation .txt {}
 
@@ -344,6 +345,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#833ab4', end
 @media (max-width:599px) {
     /* css 설정 구간 */
 
+    /* 메뉴설정 */
+    .menu ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 12px;
+}
+
+/* snsSet설정 */
+.snsSet span {
+    text-indent: -999px;/*text-indent는 block에만 가능*/
+    display: inline-block;
+}
+/* 관련기사 설정 */
+.relation ul li {
+    width: 50%;
+}
 
 }
 

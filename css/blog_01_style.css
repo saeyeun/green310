@@ -387,7 +387,10 @@ body {
     padding-bottom: 15px;
 }
 
-
+.box1,.boxA,.copyright {
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 
 /* 화면의 크기설정및 가운데배치 */
@@ -400,7 +403,27 @@ body {
 
 /* 미디어쿼리 구간설정 //////////// */
 /* 1.모바일 구간  599px 이하 구간///*/
-@media (max-width:599px) {}
+@media (max-width:599px) {
+
+/* snsSet설정 */
+.snsSet span {
+    text-indent: -999px;
+    display: inline-block;
+}
+
+/* 관련기사 설정 */
+.relation ul li {
+    width: 50%;
+}
+
+/* 메뉴설정 */
+.menu ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 10px;
+}
+
+}
 
 
 

@@ -28,7 +28,7 @@ body {
 
 /* 레이아웃 */
 header {
-    background-color: aqua;
+    /* background-color: aqua; */
     width: 15%;
     height: 100%;
     position: fixed;
@@ -97,4 +97,502 @@ article:nth-child(11) {
 }
 article:nth-child(12) {
     background-color: #000;
+}
+
+/* 미디어쿼리구간 /////////////////////////*/
+/* 480~639 */
+@media (min-width:480px) and (max-width:639px) {
+    header {
+        position: relative; /*fixed구조를 일반형으로 변경*/
+        width: 100%; /*가로로 꽉 채움*/
+        height: 80px; /*임시로 설정*/
+        /* background-color: aqua; */
+    }
+    nav {
+        width:100%;
+        margin-left: 0;
+        /* 빈공간 없애주기 */
+    }
+    section {
+        width:100%;
+        margin-left: 0;
+    }
+
+    /* header 콘텐츠 */
+    header h1 {
+        /* position: absolute; 변경될 필요X */
+        width: 200px; /*로고의 사이즈*/
+        height: 40px;
+        background-image: url(../img/logo2.png); /*로고 이미지 가로형으로 변경*/
+        /* text-indent삭제 */
+        top: 20px;
+        left: 20px;
+        margin-left: 0;
+        /* background-size: contain;
+        background-repeat: no-repeat; 변경될 필요X */
+    }
+
+    .gnb {
+        /* position: absolute; 변경x*/
+        top: 20px;/*로고 top20px로 동일하게 맞춤*/
+        right: 40px;
+    
+    }
+    .gnb li {
+        float: left;
+    }
+    /* .gnb li a {
+        display: block;
+        padding: 8px 30px;
+        font-size: 17px;
+        font-weight: bold;
+        text-align: left;
+    } */
+    
+    /* .gnb li i {
+        margin-right: 15px;
+    } */
+    
+    .snsSet {
+        display: none;
+        /* position: absolute; */
+        bottom: 20px;
+        width: 90px; /*가로길이 꽉채워서 2줄로 만들기*/
+        /* height: 47px; */
+        right: 40px;
+        margin-right: 0px;
+    }
+
+
+    article {
+        float: left;
+        width: 20%;
+        height: 260px;
+    }
+    
+    /* article 박스 크기 각자 지정 */
+    article:nth-child(1) {
+        background-color: #ddd;
+        width: 75%;
+        height: 520px;
+    }
+    article:nth-child(2) {
+        background-color: #ccc;
+        width: 25%;
+    }
+    article:nth-child(3) {
+        background-color: #bbb;
+    }
+    article:nth-child(4) {
+        background-color: #aaa;
+        
+    }
+    article:nth-child(5) {
+        background-color: #777;
+        
+    }
+    article:nth-child(6) {
+        background-color: #666;
+        width: 50%;
+    }
+    article:nth-child(7) {
+        background-color: #555;
+        width: 50%;
+    }
+    article:nth-child(8) {
+        background-color: #444;
+    }
+    article:nth-child(9) {
+        background-color: #333;
+        width: 25%;
+    }
+    article:nth-child(10) {
+        background-color: #222;
+    }
+    article:nth-child(11) {
+        background-color: #111;
+    }
+    article:nth-child(12) {
+        background-color: #000;
+    }
+}
+
+/* 3번 640~779 */
+@media (min-width:640px) and (max-width:779px) {
+    header {
+        position: relative; /*fixed구조를 일반형으로 변경*/
+        width: 100%; /*가로로 꽉 채움*/
+        height: 80px; /*임시로 설정*/
+        /* background-color: aqua; */
+    }
+    nav {
+        width:100%;
+        margin-left: 0;
+        /* 빈공간 없애주기 */
+    }
+    section {
+        width:100%;
+        margin-left: 0;
+    }
+
+    /* header 콘텐츠 */
+    header h1 {
+        /* position: absolute; 변경될 필요X */
+        width: 200px; /*로고의 사이즈*/
+        height: 40px;
+        background-image: url(../img/logo2.png); /*로고 이미지 가로형으로 변경*/
+        /* text-indent삭제 */
+        top: 20px;
+        left: 20px;
+        margin-left: 0;
+        /* background-size: contain;
+        background-repeat: no-repeat; 변경될 필요X */
+    }
+
+    .gnb {
+        /* position: absolute; 변경x*/
+        top: 20px;/*로고 top20px로 동일하게 맞춤*/
+        right: 40px;
+    
+    }
+    .gnb li {
+        float: left;
+    }
+    /* .gnb li a {
+        display: block;
+        padding: 8px 30px;
+        font-size: 17px;
+        font-weight: bold;
+        text-align: left;
+    } */
+    
+    /* .gnb li i {
+        margin-right: 15px;
+    } */
+    
+    .snsSet {
+        display: none;
+        /* position: absolute; */
+        bottom: 20px;
+        width: 90px; /*가로길이 꽉채워서 2줄로 만들기*/
+        /* height: 47px; */
+        right: 40px;
+        margin-right: 0px;
+    }
+
+    article {
+        float: left;
+        width: 20%;
+        height: 260px;
+    }
+    
+    /* article 박스 크기 각자 지정 */
+    article:nth-child(1) {
+        background-color: #ddd;
+        width: 75%;
+        height: 520px;
+    }
+    article:nth-child(2) {
+        background-color: #ccc;
+        width: 25%;
+    }
+    article:nth-child(3) {
+        background-color: #bbb;
+    }
+    article:nth-child(4) {
+        background-color: #aaa;
+        
+    }
+    article:nth-child(5) {
+        background-color: #777;
+        
+    }
+    article:nth-child(6) {
+        background-color: #666;
+        width: 50%;
+    }
+    article:nth-child(7) {
+        background-color: #555;
+        width: 50%;
+    }
+    article:nth-child(8) {
+        background-color: #444;
+    }
+    article:nth-child(9) {
+        background-color: #333;
+        width: 25%;
+    }
+    article:nth-child(10) {
+        background-color: #222;
+    }
+    article:nth-child(11) {
+        background-color: #111;
+    }
+    article:nth-child(12) {
+        background-color: #000;
+    }
+}
+
+
+/* 4. 780~1023 까지 구간 */
+@media (min-width:780px) and (max-width:1023px) {
+     /* css설정구간 */
+     header {
+        position: relative; /*fixed구조를 일반형으로 변경*/
+        width: 100%; /*가로로 꽉 채움*/
+        height: 80px; /*임시로 설정*/
+        /* background-color: aqua; */
+    }
+    nav {
+        width:100%;
+        margin-left: 0;
+        /* 빈공간 없애주기 */
+    }
+    section {
+        width:100%;
+        margin-left: 0;
+    }
+
+    /* header 콘텐츠 */
+    header h1 {
+        /* position: absolute; 변경될 필요X */
+        width: 200px; /*로고의 사이즈*/
+        height: 40px;
+        background-image: url(../img/logo2.png); /*로고 이미지 가로형으로 변경*/
+        /* text-indent삭제 */
+        top: 20px;
+        left: 20px;
+        margin-left: 0;
+        /* background-size: contain;
+        background-repeat: no-repeat; 변경될 필요X */
+    }
+
+    .gnb {
+        /* position: absolute; 변경x*/
+        top: 20px;/*로고 top20px로 동일하게 맞춤*/
+        right: 40px;
+    
+    }
+    .gnb li {
+        float: left;
+    }
+    /* .gnb li a {
+        display: block;
+        padding: 8px 30px;
+        font-size: 17px;
+        font-weight: bold;
+        text-align: left;
+    } */
+    
+    /* .gnb li i {
+        margin-right: 15px;
+    } */
+    
+    .snsSet {
+        display: none;
+        /* position: absolute; */
+        bottom: 20px;
+        width: 90px; /*가로길이 꽉채워서 2줄로 만들기*/
+        /* height: 47px; */
+        right: 40px;
+        margin-right: 0px;
+    }
+
+    article {
+        float: left;
+        width: 20%;
+        height: 260px;
+    }
+    
+    /* article 박스 크기 각자 지정 */
+    article:nth-child(1) {
+        background-color: #ddd;
+        width: 75%;
+        height: 520px;
+    }
+    article:nth-child(2) {
+        background-color: #ccc;
+        width: 25%;
+    }
+    article:nth-child(3) {
+        background-color: #bbb;
+    }
+    article:nth-child(4) {
+        background-color: #aaa;
+        
+    }
+    article:nth-child(5) {
+        background-color: #777;
+        
+    }
+    article:nth-child(6) {
+        background-color: #666;
+        width: 50%;
+    }
+    article:nth-child(7) {
+        background-color: #555;
+        width: 50%;
+    }
+    article:nth-child(8) {
+        background-color: #444;
+    }
+    article:nth-child(9) {
+        background-color: #333;
+        width: 25%;
+    }
+    article:nth-child(10) {
+        background-color: #222;
+    }
+    article:nth-child(11) {
+        background-color: #111;
+    }
+    article:nth-child(12) {
+        background-color: #000;
+    }
+}
+
+
+/* 5. 1024 ~ 1279 까지 구간 */
+@media(min-width:1024px)and(max-width:1279px) {
+    /* css설정구간 */
+    header {
+        position: relative; /*fixed구조를 일반형으로 변경*/
+        width: 100%; /*가로로 꽉 채움*/
+        height: 80px; /*임시로 설정*/
+        /* background-color: aqua; */
+    }
+    nav {
+        width:100%;
+        margin-left: 0;
+        /* 빈공간 없애주기 */
+    }
+    section {
+        width:100%;
+        margin-left: 0;
+    }
+
+    article {
+        float: left;
+        width: 20%;
+        height: 260px;
+    }
+    
+    /* article 박스 크기 각자 지정 */
+    article:nth-child(1) {
+        background-color: #ddd;
+        width: 75%;
+        height: 520px;
+    }
+    article:nth-child(2) {
+        background-color: #ccc;
+        width: 25%;
+    }
+    article:nth-child(3) {
+        background-color: #bbb;
+    }
+    article:nth-child(4) {
+        background-color: #aaa;
+        
+    }
+    article:nth-child(5) {
+        background-color: #777;
+        
+    }
+    article:nth-child(6) {
+        background-color: #666;
+        width: 50%;
+    }
+    article:nth-child(7) {
+        background-color: #555;
+        width: 50%;
+    }
+    article:nth-child(8) {
+        background-color: #444;
+    }
+    article:nth-child(9) {
+        background-color: #333;
+        width: 25%;
+    }
+    article:nth-child(10) {
+        background-color: #222;
+    }
+    article:nth-child(11) {
+        background-color: #111;
+    }
+    article:nth-child(12) {
+        background-color: #000;
+    }
+} 
+
+/* 6. 1280~1599 까지 구간 /////////////// */
+
+@media (min-width:1280px) and (max-width:1599px) {
+    /* css설정구간 */
+    header {
+        position: relative; /*fixed구조를 일반형으로 변경*/
+        width: 100%; /*가로로 꽉 채움*/
+        height: 80px; /*임시로 설정*/
+        /* background-color: aqua; */
+    }
+    nav {
+        width:100%;
+        margin-left: 0;
+        /* 빈공간 없애주기 */
+    }
+    section {
+        width:100%;
+        margin-left: 0;
+    }
+
+        article {
+            float: left;
+            width: 20%;
+            height: 260px;
+        }
+        
+        /* article 박스 크기 각자 지정 */
+        article:nth-child(1) {
+            background-color: #ddd;
+            width: 75%;
+            height: 520px;
+        }
+        article:nth-child(2) {
+            background-color: #ccc;
+            width: 25%;
+        }
+        article:nth-child(3) {
+            background-color: #bbb;
+        }
+        article:nth-child(4) {
+            background-color: #aaa;
+            
+        }
+        article:nth-child(5) {
+            background-color: #777;
+            
+        }
+        article:nth-child(6) {
+            background-color: #666;
+            width: 50%;
+        }
+        article:nth-child(7) {
+            background-color: #555;
+            width: 50%;
+        }
+        article:nth-child(8) {
+            background-color: #444;
+        }
+        article:nth-child(9) {
+            background-color: #333;
+            width: 25%;
+        }
+        article:nth-child(10) {
+            background-color: #222;
+        }
+        article:nth-child(11) {
+            background-color: #111;
+        }
+        article:nth-child(12) {
+            background-color: #000;
+        }
 }
