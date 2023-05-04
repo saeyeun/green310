@@ -1,273 +1,313 @@
-@charset 'utf-8';
+@charset 'UTF-8';
 
-/* header 콘텐츠 */
-/* header {
-    background-color: #fff;
-} */
 
-header h1 {
-    position: absolute; /*layout.css에서 header는 이미 position 값이 있기 때문에 header가 기준*/
-    width: 180px;
-    height: 136px;
-    background-image: url(../img/logo1.png);/*백그라운드이미지로 넣은 이유? 변경됐을 때 css값을 바꾸기 위해, h1 또 사용X*/
-    text-indent: -9999px; /*html의 logo글자는 바깥으로 날려버리기*/
-    left: 50%;
-    margin-left: -90px; /*와이드의 절반값*/
+/* header콘텐츠 */
+
+header h1 {position: absolute;
+        width: 180px;
+        height: 136px;
+        background-image: url(../img/logo1.png);
+        text-indent: -9999px;
+        left: 50%;
+        margin-left: -90px;
     top: 70px;
-    background-size: contain;
-    background-repeat: no-repeat;
+background-size: contain;
+background-repeat: no-repeat;
 }
-
-.gnb {
-    position: absolute;
+.gnb {position: absolute;
     top: 300px;
-    right: 40px; /*반응형도 right*/
-
-}
+    right: 40px;}
 .gnb li {}
-.gnb li a {
-    display: block; /*a에게 블럭값 필수*/
-    padding: 8px 30px;
+.gnb li a {display: block;
+        padding: 8px 30px;
     font-size: 17px;
-    font-weight: bold;
-    text-align: left;
-}
-.gnb li i {
-    margin-right: 15px;
-}
+font-weight: bold;
+text-align: left;}
+.gnb li i {margin-right: 15px;}
 
-.snsSet {
-    position: absolute;
-    bottom: 50px;
-    width: 90px; /*가로길이 꽉채워서 2줄로 만들기*/
+.snsSet {position: absolute;
+        bottom: 50px;
+    width: 90px;
     height: 47px;
-    right: 50%;
-    margin-right: -45px;
-}
-.snsSet a {
-    float:left;
-}
+right: 50%;
+margin-right: -45px;}
+.snsSet a {float: left;
+        }
 
-/* nav 콘텐츠 */
 
-nav {position: relative;} /*기준설정*/
+    /* nav 콘텐츠 */
+    nav {position: relative;}
 
-nav a:nth-child(1) {
-    position: absolute;
-    left: 10px;
+nav a:nth-child(1) {position: absolute;
+                    left: 10px;
+                    top: 5px;}
+nav a:nth-child(2) {position: absolute;
+                    left: 150px;
+                top: 5px;}
+nav a:nth-child(3) {position: absolute;
+right: 96px;
+top: 5px;}
+nav a:nth-child(4) {position: absolute;
     top: 5px;
-}
-nav a:nth-child(2) {
-    position: absolute;
-    left: 150px;/*이미지 가로크기 130px+left떨어진 값10px + 1번과 떨어진 값 10px*/
-    top: 5px;
-}
-nav a:nth-child(3) {
-    position: absolute;
-    right: 96px;
-    top: 5px;
-}
-nav a:nth-child(4) {
-    position: absolute;
-    right: 10px;
-    top: 5px;
+right: 10px;}
+
+
+
+/* 아티클 내부설정 */
+article>div {
+    width:100%;
+    height: 100%;
+    position: relative;
 }
 
-/* 미디어쿼리 구간 ///////////////////////*/
+/* 배경이미지 삽입구간설정 */
+article .bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  center center;
+    overflow: hidden;
+}
+article .bg1 {background-image: url(../img/pic1.jpg);}
+article .bg2 {background-image: url(../img/pic2.jpg);}
+article .bg3 {background-image: url(../img/pic3.jpg);}
+article .bg4 {background-image: url(../img/pic4.jpg);}
+article .bg5 {background-image: url(../img/pic5.jpg);}
+article .bg6 {background-image: url(../img/pic6.jpg);}
+article .bg7 {background-image: url(../img/pic7.jpg);}
+article .bg8 {background-image: url(../img/pic8.jpg);}
 
+article .bg span {
+    font-size: 60px;
+    color: #fff;
+    position:absolute;
+    bottom: 0;
+    right: 20px;
+    transform: scale(10);
+    opacity: 0;
+    transition: all 0.6s;
+}
+/* transition 이란? 서서히 변화하라는 명령어로
+속성명으로 하나하나 지시하거나, 모든 속성을 불러 지시한다.
+또한 움직이는 속도를 초단위로 표시한다.
+시작을 알리는 선택자에 넣는다.
+hover 값의 동적인 요소를 만들 때 사용한다. */
 
-/* 2. 480~639 */
-@media (min-width:480px) and (max-width:639px) {
-    /* header 콘텐츠 */
-    header h1 {
-        /* position: absolute; 변경될 필요X */
-        width: 200px; /*로고의 사이즈*/
-        height: 40px;
-        background-image: url(../img/logo2.png); /*로고 이미지 가로형으로 변경*/
-        /* text-indent삭제 */
-        top: 20px;
-        left: 20px;
-        margin-left: 0;
-        /* background-size: contain;
-        background-repeat: no-repeat; 변경될 필요X */
+    article .bg:hover span {
+        transform: scale(1);
+        opacity: 1;
     }
 
-    .gnb {
-        /* position: absolute; 변경x*/
-        top: 20px;/*로고 top20px로 동일하게 맞춤*/
-        right: 40px;
-    
-    }
-    .gnb li {
-        float: left;
-    }
-    .gnb li a {
-        display: block;
-        padding: 8px 10px;
-        font-size: 17px;
-        font-weight: bold;
-        text-align: left;
-    }
-    
-    /* .gnb li i {
-        margin-right: 15px;
-    } */
-    
-    .snsSet {
-        display: none;
-        /* position: absolute; */
-        bottom: 20px;
-        width: 90px; /*가로길이 꽉채워서 2줄로 만들기*/
-        /* height: 47px; */
-        right: 40px;
-        margin-right: 0px;
-    }
+/* 텍스트 영역설정 */
+article .txt {
+    color: #6666;
+    background-color: #fff;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    transition: all 1s;
 }
 
-/* 4. 780~1023 까지 구간 */
-@media (min-width:780px) and (max-width:1023px) {
-     /* header 콘텐츠 */
-     header h1 {
-        /* position: absolute; 변경될 필요X */
-        width: 200px; /*로고의 사이즈*/
-        height: 40px;
-        background-image: url(../img/logo2.png); /*로고 이미지 가로형으로 변경*/
-        /* text-indent삭제 */
-        top: 20px;
-        left: 20px;
-        margin-left: 0;
-        /* background-size: contain;
-        background-repeat: no-repeat; 변경될 필요X */
-    }
-
-    .gnb {
-        /* position: absolute; 변경x*/
-        top: 20px;/*로고 top20px로 동일하게 맞춤*/
-        right: 40px;
-    
-    }
-    .gnb li {
-        float: left;
-    }
-    .gnb li a {
-        display: block;
-        padding: 8px 10px;
-        font-size: 17px;
-        font-weight: bold;
-        text-align: left;
-    }
-    
-    /* .gnb li i {
-        margin-right: 15px;
-    } */
-    
-    .snsSet {
-        display: none;
-        /* position: absolute; */
-        bottom: 20px;
-        width: 90px; /*가로길이 꽉채워서 2줄로 만들기*/
-        /* height: 47px; */
-        right: 40px;
-        margin-right: 0px;
-    }
+article .txt:hover {
+    background-color: #6Ce2fb;
+    color: #fff;
 }
 
-/* 5. 1024~1279 까지 구간 */
+article .txt strong {display: block;
+font-size: 30px;}
+article .txt em {}
+
+
+/* 배경색 빼는 방법 */
+article:nth-child(3) .txt {background-color: #bff7fa;}
+/* txt중에서 .txt2의 이름을 갖고있는 선택자 */
+article .txt .txt2 {background-color: #e3f1fb;}
+article .txt i {position: absolute;
+font-size: 220px;
+color: #b2effc;
+right: -550px;
+transition: all 0.7s;
+z-index: 0;}
+
+article p {z-index: 10;
+position: relative;}
+
+/* -550px 덮어써야함 */
+article:nth-child(3) i {right:20px;}
+
+
+article .txt:hover i {right: 0;}
+
+
+
+
+
+
+
+/* 미디어쿼리구간//////////////////////////////////////////////// */
+/* 2.480 ~ 639까지구간 */
+@media(min-width:480px) and (max-width:639px) {
+
+
+
+/* header콘텐츠 */
+
+header h1 {position: absolute;
+    width: 200px;
+    height: 40px;
+    background-image: url(../img/logo2.png);
+    left: 50%;
+    margin-left:-100px;
+    top: 20px;
+}
+.gnb {
+top: 80px;
+right:00px;
+width: 100%;}
+.gnb li {float: left;
+        width: 25%;}
+.gnb li a {display: block;
+    padding: 4px 4px;
+font-size: 17px;
+font-weight: bold;
+text-align: center;}
+
+
+.snsSet { display: none;
+    bottom: 20px;
+right:40px;
+margin-right: 0px;}
+
+
+}
+
+/* 3.640~779 까지구간 */
+@media(min-width:640px) and (max-width:779px) {
+
+
+/* header콘텐츠 */
+
+header h1 {position: absolute;
+    width: 200px;
+    height: 40px;
+    background-image: url(../img/logo2.png);
+    left: 20px;
+    margin-left:0;
+    top: 20px;
+}
+.gnb {
+top: 20px;
+right:40px}
+.gnb li {float: left;}
+.gnb li a {display: block;
+    padding: 8px 10px;
+font-size: 17px;
+font-weight: bold;
+text-align: left;}
+
+
+.snsSet { display: none;
+bottom: 20px;
+right:40px;
+margin-right: 0px;}
+
+
+    
+}
+
+
+
+
+/* 4.780 ~1023  까지 구간 ////////////////*/
+@media(min-width:780px) and (max-width:1023px) {
+
+
+/* header콘텐츠 */
+
+header h1 {position: absolute;
+    width: 200px;
+    height: 40px;
+    background-image: url(../img/logo2.png);
+    left: 20px;
+    margin-left:0;
+    top: 20px;
+}
+.gnb {
+top: 20px;
+right:40px}
+.gnb li {float: left;}
+
+
+
+.snsSet { display: none;
+bottom: 20px;
+right:40px;
+margin-right: 0px;}
+
+
+    
+}
+
+
+
+
+
+/* 5.1024~1279 까지 구간 */
 @media(min-width:1024px) and (max-width:1279px) {
 
-    /* header 콘텐츠 */
-    header h1 {
-        /* position: absolute; 변경될 필요X */
-        width: 200px; /*로고의 사이즈*/
-        height: 40px;
-        background-image: url(../img/logo2.png); /*로고 이미지 가로형으로 변경*/
-        /* text-indent삭제 */
-        top: 20px;
-        left: 20px;
-        margin-left: 0;
-        /* background-size: contain;
-        background-repeat: no-repeat; 변경될 필요X */
-    }
 
-    .gnb {
-        /* position: absolute; 변경x*/
-        top: 20px;/*로고 top20px로 동일하게 맞춤*/
-        right: 40px;
-    
-    }
-    .gnb li {
-        float: left;
-    }
-    /* .gnb li a {
-        display: block;
-        padding: 8px 30px;
-        font-size: 17px;
-        font-weight: bold;
-        text-align: left;
-    } */
-    
-    /* .gnb li i {
-        margin-right: 15px;
-    } */
-    
-    .snsSet {
-        display: none;
-        /* position: absolute; */
-        bottom: 20px;
-        width: 90px; /*가로길이 꽉채워서 2줄로 만들기*/
-        /* height: 47px; */
-        right: 40px;
-        margin-right: 0px;
-    }
+/* header콘텐츠 */
+
+header h1 {position: absolute;
+    width: 200px;
+    height: 40px;
+    background-image: url(../img/logo2.png);
+    left: 20px;
+    margin-left:0;
+    top: 20px;
+}
+.gnb {
+top: 20px;
+right:40px}
+.gnb li {float: left;}
+
+
+
+.snsSet { display: none;
+    bottom: 20px;
+right:40px;
+margin-right: 0px;}
+
+
+
+
 }
 
-/* 6. 1280~1599 까지 구간 /////////////// */
-@media(min-width:1280px) and (max-width:1599px) {
-    
-    /* header 콘텐츠 */
-    header h1 {
-        /* position: absolute; 변경될 필요X */
-        width: 200px; /*로고의 사이즈*/
-        height: 40px;
-        background-image: url(../img/logo2.png); /*로고 이미지 가로형으로 변경*/
-        /* text-indent삭제 */
-        top: 20px;
-        left: 20px;
-        margin-left: 0;
-        /* background-size: contain;
-        background-repeat: no-repeat; 변경될 필요X */
-    }
 
-    .gnb {
-        /* position: absolute; 변경x*/
-        top: 20px;/*로고 top20px로 동일하게 맞춤*/
-        right: 200px;
-    
-    }
-    .gnb li {
-        float: left;
-    }
-    /* .gnb li a {
-        display: block;
-        padding: 8px 30px;
-        font-size: 17px;
-        font-weight: bold;
-        text-align: left;
-    } */
-    
-    /* .gnb li i {
-        margin-right: 15px;
-    } */
-    
-    .snsSet {
-        /* position: absolute; */
-        bottom: 20px;
-        width: 90px; /*가로길이 꽉채워서 2줄로 만들기*/
-        /* height: 47px; */
-        right: 40px;
-        margin-right: 0px;
-    }
-    /* .snsSet a {
-        float:left;
-    } */
+
+/* 6.1280~ 1599 까지 구간//////////////////////// */
+@media(min-width:1280px) and (max-width:1599px){
+
+/* header콘텐츠 */
+
+header h1 {position: absolute;
+    width: 200px;
+    height: 40px;
+    background-image: url(../img/logo2.png);
+    left: 20px;
+    margin-left:0;
+    top: 20px;
+}
+.gnb {
+top: 20px;
+right:200px}
+.gnb li {float: left;}
+
+
+
+.snsSet {
+bottom: 20px;
+right:40px;
+margin-right: 0px;}
+
+
+
 }
