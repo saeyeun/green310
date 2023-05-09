@@ -1,0 +1,49 @@
+@charset 'utf-8';
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+body {
+    font-family: '맑은고딕', 'Apple SD Gohic Neo', sans-serif;;
+}
+
+/* 로고설정 */
+.logo img {
+    width: 250px;
+    height: 33px;
+}
+
+/* 메뉴설정 */
+.menu li a {
+    display: block;
+    padding: 10px 15px; 
+    font-size: 14px;
+}
+
+.menu li a:hover {color: #666;}
+
+
+
+/* 미디어쿼리 구간///////////////////////////////////////////////// */
+
+/* 1190px이상일때 */
+@media(min-width:1190px) {
+    .boxA, .box3, .box4, .copyright, .box6
+}
