@@ -77,16 +77,16 @@
 
                 //학점출력
                 let re1 = document.getElementById('re1')
-                if (ave >= 90) {
+                if (ave>= 90) {
                     re1.textContent = 'A'
                 }
-                if (ave >= 80) {
+                else if (ave<90 && ave>=80) {
                     re1.textContent = 'B'
                 }
-                if (ave >= 70) {
+                else if (ave<80 && ave>=70) {
                     re1.textContent = 'C'
                 }
-                if (ave >= 60) {
+                else if (ave<70 && ave >= 60) {
                     re1.textContent = 'D'
                 } else {
                     re1.textContent = 'F'
