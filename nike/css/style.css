@@ -1,0 +1,174 @@
+@charset 'utf-8';
+
+/* 폰트설정 */
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Play&display=swap');
+
+/* font-family: 'Monoton', cursive;
+font-family: 'Play', sans-serif; */
+
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #000;
+    text-align: none;
+    text-decoration: none;
+}
+ul, ol {
+    list-style: none;
+}
+img {
+    vertical-align: bottom;
+}
+
+/* 로고 */
+h1 {
+    position: fixed;
+    left: 40px;
+    top: 40px;
+    z-index: 10;
+}
+h1 img {
+    width: 280px;
+    height: auto;
+}
+
+/* 배경동영상 */
+.vid {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: -60px;
+}
+.vid video {
+    width: 100%;
+    min-width: 1600px;
+}
+
+/* 헤더설정 */
+header {
+    background-color: #b9fb05;
+    position: fixed;
+    width: 700px;
+    height: 100%;
+    z-index: 8;
+
+    transform: skewx(-40deg);
+    left: -420px;
+}
+header .gnb {
+    position: absolute;
+    right: 0;
+    top: 150px;
+    width: 220px;
+    /* background-color: aqua; */
+}
+header .gnb>li {}
+header .gnb>li>a {
+    text-align: right;
+    display: block;
+    padding-right: 40px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Play', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+
+header .gnb>li:hover>a {
+    background-color: #111;
+    color: #fff;
+}
+
+header em {
+    transform: skewX(40deg);
+    display: inline-block;
+}
+
+/* 2뎁스 설정 */
+
+header .gnb>li {
+    position: relative;
+
+}
+
+header .gnb>li ul {
+    position: absolute;
+    display: none;
+    /* 메뉴 가로길이만큼 이동 */
+    left: 220px;
+    top: 0px;
+}
+
+header .gnb>li:hover ul {
+    display: block;
+}
+
+header .gnb ul a {
+    display: block;
+    width: 150px;
+    background-color: #222;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    padding-top:  10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    border-bottom: 1px solid #b9fb05;
+    margin-bottom: 3px;
+}
+
+/* 사이드메뉴 */
+.side {
+    background-color: aqua;
+    position: fixed;
+    width: 800px;
+    height: 100%;
+    bottom: 0;
+    z-index: 7;
+
+    transform: skewX(-40deg);    
+    right: -550px;  
+}
+
+.side .con {
+    width: 350px;
+    height: 100%;
+    background-color: fuchsia;
+    position: absolute;
+    left: 50px;
+    bottom: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.side .con p {
+    position: absolute;
+}
+.side .con p:nth-child(1){
+    bottom: 250px;
+}
+.side .con p:nth-child(2){
+    bottom: 150px;
+}
+.side .con p:nth-child(3){
+    bottom: 50px;
+}
+
+.side .con p em {
+    color: #b9fb05;
+    display: inline-block;
+    transform: skewX(40deg);
+    font-size: 18px;
+    padding: 2px;
+}
+.side .con p a {}
+.side .con p a img {
+    width: 300px;
+    height: 70px;
+}
