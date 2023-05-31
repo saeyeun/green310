@@ -24,6 +24,13 @@ img {
     vertical-align: bottom;
 }
 
+/* 적응형 웹임을 알리는 방식과 같다. */
+body {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
 /* 로고 */
 h1 {
     position: fixed;
@@ -51,7 +58,7 @@ h1 img {
 
 /* 헤더설정 */
 header {
-    background-color: #b9fb05;
+    background: linear-gradient(-45deg, #e6fc55,#b9fb05,#97e031);
     position: fixed;
     width: 700px;
     height: 100%;
@@ -124,9 +131,88 @@ header .gnb ul a {
     margin-bottom: 3px;
 }
 
+/* snsSet설정 */
+.snsSet {
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    z-index: 8;
+    display: flex;
+}
+.snsSet li {
+    margin-right: 20px;
+}
+/* a에게 컬러값을 줘야함 */
+.snsSet a {
+    color: #b9fb05;
+}
+.snsSet i {
+    font-size: 25px;
+}
+
+.snsSet a:hover i {
+    transform: scale(1.2);
+}
+
+/* hero텍스트설정 */
+section {
+    position: fixed;
+    right: 200px;
+    top: 30%;
+    z-index: 10;
+    width: 340px;
+    height: 280px;
+    /* background-color: yellow; */
+
+}
+
+section p:nth-child(1){
+    font-family: 'Monoton', cursive;
+    font-size: 160px;
+    color: #b9fb05;
+}
+
+section p:nth-child(1) em {
+    font-size: 50px;
+    font-family: 'Play', sans-serif;
+    color: #fff;
+}
+
+section p:nth-child(2){
+    font-size: 34px;
+    font-family: 'Play', sans-serif;
+    color: #bbb;
+    letter-spacing: -2px;
+    margin-top: -30px;
+}
+
+section p:nth-child(2) b {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #b9fb05;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 사이드메뉴 */
 .side {
-    background-color: aqua;
+    background-color: #111;
+    opacity: 0.5;
     position: fixed;
     width: 800px;
     height: 100%;
@@ -134,35 +220,49 @@ header .gnb ul a {
     z-index: 7;
 
     transform: skewX(-40deg);    
-    right: -550px;  
+    right: -800px;  
+
+    transition: all 0.5s;
 }
 
 .side .con {
-    width: 350px;
+    width: 400px;
     height: 100%;
-    background-color: fuchsia;
+    background-color: #000;
     position: absolute;
-    left: 50px;
+    left: 150px;
     bottom: 0;
     padding: 10px;
     box-sizing: border-box;
+
+    transition: all 0.8s;
 }
 .side .con p {
     position: absolute;
+    width: 300px;
+    
+    height: 100px;
+    transition: all 0.8s;
 }
+
 .side .con p:nth-child(1){
-    bottom: 250px;
+    bottom: 290px;
+    left: 300px;
+
 }
 .side .con p:nth-child(2){
-    bottom: 150px;
+    bottom: 170px;
+    left: 250px;
+
 }
 .side .con p:nth-child(3){
     bottom: 50px;
+    left: 200px;
 }
 
 .side .con p em {
-    color: #b9fb05;
-    display: inline-block;
+    color: #a0db50;
+    display: inline-block; /*display:block으로 해도 텍스트와 이미지가 떨어짐*/
     transform: skewX(40deg);
     font-size: 18px;
     padding: 2px;
@@ -171,4 +271,17 @@ header .gnb ul a {
 .side .con p a img {
     width: 300px;
     height: 70px;
+
 }
+
+.side:hover {
+    right: -500px;
+}
+
+.side:hover .con {
+    left: 50px;
+}
+
+.side:hover p:nth-child(1) {left:50px;}
+.side:hover p:nth-child(2) {left:50px;}
+.side:hover p:nth-child(3) {left:50px;}
