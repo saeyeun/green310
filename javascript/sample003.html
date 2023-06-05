@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동슬라이드예제3</title>
+
+    <!-- 제이쿼리CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            //btn li를 클릭했을 때 slide의 li가 같은 순번을 찾아 움직여라
+
+            $('.btn li').click(function(){
+
+                let i = $(this).index()
+                console.log(i)
+                $('.slide li').eq(i-1).css({'left':'0'}).stop().animate({'left':'-100%'},800)
+                $('.slide li').eq(i).css({'left':'100%'}).stop().animate({'left':'0'},800)
+
+
+                // btn 설정
+
+                // 클래스 'on' 삭제 (버튼색X)
+                $('.btn li').removeClass('on')
+                // 선택한 자신 선택 (버튼색O)
+                $(this).addClass('on')
+
+            });
+
+
+            // 3초에 한번씩 자동으로 컴퓨터가 btn li (0,1,2)를 클릭해라.
+            let a = 0;
+            setInterval(function(){
+                a++;
+                if(a==3)a=0;
+                console.log(a)
+
+                $('.btn li').eq(a).trigger('click')
+                //trigger 핸들러를 통해 마우스를 제어하는 구조
+
+
+
+            },3000)
+
+
+
+
+
+            //slide2 ---------------------------------------------
+
+            $('.btn2 li').click(function () {
+
+                let ii = $(this).index()
+                console.log(ii)
+                $('.slide2 li').eq(ii - 1).css({ 'top': '0' }).stop().animate({ 'top': '100%' }, 800)
+                $('.slide2 li').eq(ii).css({ 'top': '-100%' }).stop().animate({ 'top': '0' }, 800)
+
+
+                $('.btn2 li').removeClass('on')
+                $(this).addClass('on')
+
+
+
+            });
+
+
+            //자동
+            let b = 0;
+            setInterval(function(){
+
+                b++;
+                if(b==3)b=0
+                
+                console.log(b)
+
+                $('.btn2 li').eq(b).trigger('click')
+
+
+
+            },2000)
+
+
+            
+
+        })
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="slide">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+
+        
+        <div class="btn">
+            <ul>
+                <li class="on">1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="wrap2">
+        <div class="slide2">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+        <div class="btn2">
+            <ul>
+                <li class="on">1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,ol {
+            list-style: none;
+        }
+
+        #wrap {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .slide {
+            width: 100%;
+            height: 500px;
+            overflow: hidden; /*하단 스크롤 없애기, 크기값이 없는 경우에는 적용X 단, height만 써줘도 적용되는 경우도 있음*/
+            position: relative;
+        }
+        .slide ul {
+            width: auto;
+            height: 500px;
+        }
+        .slide li {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 100%;
+            top: 0;
+            text-indent: -9999px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .slide li:nth-child(1) {
+            left: 0;
+            background-image: url(slide/img/0.png);
+        }
+        .slide li:nth-child(2) {
+            background-image: url(slide/img/1.png);
+        }
+        .slide li:nth-child(3) {
+            background-image: url(slide/img/2.png);
+        }
+
+
+        .btn {
+            position: absolute;
+            width: 54px;
+            left: 50%;
+            margin-left: -27px;
+            bottom: 70px;
+        }
+        .btn ul {
+            display: flex;
+        }
+        .btn li {
+            width: 14px;
+            height: 14px;
+            border-radius: 7px;
+            background-color: #fff;
+            margin: 0 2px;
+            opacity: 0.6;
+            text-indent: -9999px;
+        }
+
+        .btn li.on {
+            background-color: #000;
+            opacity: 1;
+        }
+
+
+
+        /* 두번째 슬라이드 */
+
+
+        #wrap2{
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .slide2 {
+            width: 100%;
+            height: 600px;
+            overflow: hidden; /*하단 스크롤 없애기, 크기값이 없는 경우에는 적용X 단, height만 써줘도 적용되는 경우도 있음*/
+            position: relative;
+        }
+        .slide2 ul {
+            width: auto;
+            height: 600px;
+        }
+        .slide2 li {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: -100%;
+            text-indent: -9999px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .slide2 li:nth-child(1) {
+            top:0;
+            background-image: url(slide/img/cat1.jpg);
+        }
+        .slide2 li:nth-child(2) {
+            background-image: url(slide/img/cat2.jpg);
+        }
+        .slide2 li:nth-child(3) {
+            background-image: url(slide/img/cat3.jpg);
+        }
+
+
+
+
+
+        .btn2 {
+            position: absolute;
+            width: 162px;
+            left: 5%;
+            bottom: 50%;
+            margin-bottom: -81px;
+        }
+
+        .btn2 ul {
+            /* display: flex; */
+        }
+
+        .btn2 li {
+            width: 14px;
+            height: 14px;
+            border-radius: 7px;
+            background-color: rgb(255, 127, 22);
+            margin: 20px 0;
+            /* opacity: 0.6; */
+            text-indent: -9999px;
+
+        }
+
+        .btn2 li.on {
+            background-color: #ff2121;
+            opacity: 1;
+        }
+
+
+    </style>
+</body>
+</html>
