@@ -21,10 +21,10 @@ $(document).ready(function(){
         $('section div').eq(i).addClass('on');
 
 
-        $('#wrap nav').removeClass('on');
-        $('#wrap section').removeClass('on');
+        // $('#wrap nav').removeClass('on');
+        // $('#wrap section').removeClass('on');
 
-        $('#wrap em').fadeIn()
+        // $('#wrap em').fadeIn()
     })
 
 
