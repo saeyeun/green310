@@ -1,0 +1,82 @@
+@charset 'UTF-8';
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    cursor: none;
+}
+
+.main.show1 {
+    background-image: url(../img/sample00.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.txt {
+    display: flex;
+}
+
+.txt li {
+    margin: 100px;
+    font-size: 50px;
+    position: relative;
+    padding: 50px 50px;
+}
+
+.txt li>div {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: #000;
+    border-radius: 100%;
+    top: -24%;
+    left: -10%;
+    z-index: 99;
+    transition: all 0.4s;
+}
+
+.main .cursor {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    box-sizing: border-box;
+    background-color: #000;
+    transition-property: width,height,border-color,transform;
+    left: 0;
+    top: 0;
+    background-attachment: fixed;
+    transition: width,height 0.2s;
+    
+}
+
+.cursor.style {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
